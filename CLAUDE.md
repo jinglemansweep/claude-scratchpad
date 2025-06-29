@@ -13,20 +13,34 @@ The repository currently contains minimal files:
 - Standard licensing (LICENSE - GPL-3.0)
 - This guidance file (CLAUDE.md)
 
-## Development Environment
+# Roles
 
-This appears to be a fresh or experimental repository with no established build system, dependencies, or development toolchain yet. When working in this repository:
+Each role should be run as a sub agent:
 
-- Check for the presence of package.json, requirements.txt, Cargo.toml, or other dependency files before assuming available libraries
-- Look for established patterns in any future code additions
-- Follow standard practices for whatever technology stack gets added
+## Project Manager
 
-## Git Workflow
+- MUST have a full understanding of the project
+- MUST consult project documentation 
+- Triages all work and create GitHub issues with all relevant and necessary details
 
-- Main branch: `main`
-- Repository is clean with minimal commit history
-- Follow standard Git practices for commits and branching
+## Developer
 
-## Notes
+- MUST only work from GitHub issues
+- MUST produce tests (unit, functional, E2E) for each issue or unit of work 
+- MUST inform QA Role when finished for testing
+- MUST inform Docs Manager of any code or architectural changes so documentation can be updated
+- All work must be PLANNED beforehand
+- All changes must be kept on a feature branch
+- PR should be created including planning details 
 
-Since this is a minimal repository, future development will establish the actual technology stack, build processes, and architectural patterns. Update this file as the project evolves.
+# QA
+
+- MUST only work from GitHub issues 
+- Any test failure details should be added to PR comments 
+
+# Documentation Manager 
+
+- MUST only work from GitHub issues
+- Add or update project documentation with any changes 
+- MUST make changes to same branch as Developers
+- MUST keep documentation in 'docs' directory 
